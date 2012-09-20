@@ -1,0 +1,150 @@
+/* Content */
+
+/* News-Container */
+#content div.news div.image {
+	margin-top: 2px;
+}
+
+/* Pagination */
+a.pagination-first, a.pagination-previous,
+a.pagination-next, a.pagination-last {
+	margin-top: 24px;
+	margin-bottom: -1px;
+}
+
+/* Container */
+#content .container .container-content {
+    padding-top: 1px;
+	margin-bottom: 6px;
+}
+
+#content .container h3 {
+	padding-top: 4px;
+	padding-bottom: 2px;
+}
+
+/* Eigenschaften für Tab-Container */
+#content div.tabcontainer div.tabcontent {
+    padding: 7px 7px 6px 7px;
+}
+
+/* Footer */
+#footer {
+	margin-top: 1px;
+}
+
+/* Formulare */
+/* neues Button-Design */
+input.button, button, input.smallbutton, button.smallbutton {
+    padding: 1px 7px 3px 7px;
+}
+
+/* Datepicker */
+.ui-datepicker {
+	width: 213px;
+}
+
+.ui-datepicker a.ui-state-default:hover {
+	background-position: 0px 0px;
+}
+
+/* Header */
+#header-title {
+	top: 27px;
+}
+
+#meta-menu li.haschildren ul{
+	padding-top: 2px
+}
+
+/* Top-Nagivation */
+#top-navigation a.top, #top-navigation li.active a {
+	margin-top: -9px !important;
+}
+#top-navigation li.active a, #top-navigation a.haschildren:hover, #top-navigation a.hover {
+	background-position: -5px 1px !important;
+}
+#top-navigation li.first a.hover, #top-navigation li.first.active > a {
+	background-position: -4px 1px !important;
+}
+
+#top-navigation a.dropdown {
+	background-position: 113px 2px;
+}
+
+#top-navigation li ul li ul a.dropdown {
+	background-position: 106px 2px;
+}
+
+#top-navigation li.first a.dropdown {
+	background-position: 134px 2px;
+}
+
+#top-navigation li.first ul li ul li a.dropdown {
+	background-position: 107px 2px;
+}
+
+#top-navigation a.highlighted { 
+	background-position: 112px 4px;
+}
+
+#top-navigation li ul li ul a.highlighted {
+	background-position: 105px 4px;
+}
+
+#top-navigation li.first a.highlighted { 
+	background-position: 132px 4px;
+}
+
+#top-navigation li.first ul li ul li a.highlighted { 
+	background-position: 105px 4px;
+}
+
+#top-navigation li ul {
+	padding-bottom: 7px;
+}
+
+/* Search */
+#global-search-input {
+	padding-top: 3px !important;
+	padding-left: 4px !important;
+	margin-right: -1px !important;
+	margin-bottom: 1px !important;
+}
+
+#search-box form {
+    width: 264px !important;
+}
+
+#search-results h2 {
+	padding-top: 9px !important;
+	margin-top: -4px !important;
+	padding-bottom: 0 !important;
+}
+
+#search-results p.more {
+	margin-top: 4px;
+}
+
+#search-results a.more-link, #search-results a.more-link:visited {
+	margin-bottom: 6px !important;
+}
+
+.search-result-item div.item-content {
+    padding: 5px 0 4px !important;
+}
+
+/* Navigation */
+#navigation ul li a {
+	margin-left: 7px;
+	padding: 3px 14px 6px 10px;
+}
+
+#navigation ul li a.active {
+    padding-bottom: 12px;
+}
+
+#history-navigation ul#backlinks li a {
+	padding-bottom: 2px;
+	padding-top: 3px;
+}

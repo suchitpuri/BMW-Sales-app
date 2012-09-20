@@ -1,0 +1,1772 @@
+/* BMW screen.css
+ * Version: 2.4
+ * Date: 21.06.2011
+ */
+
+/* Style Reset
+ * hier wird auch der Standardwert für font-family (Arial, ...)
+ * font-size (12px) und color (#000) gesetzt
+ * Achtung: line-height nicht mehr standardmäßig 14px!!!
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-family: Arial, Helvetica, sans-serif;font-size:12px;color:#000;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+q:before,q:after {content:'';}
+abbr,acronym {border:0;}
+
+/* Allgemeine Eigenschaften Body */
+body {
+    height: 100%;
+    background: url("../img/side_navigation_bg.png") no-repeat scroll left top #FFFFFF;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+/* Breite und linker Rand des Inhalts */
+#page-wrapper {
+    width: 825px;
+    margin-left: 175px;
+}
+
+/* horizontale Linie */
+hr {
+	display: none;
+}
+
+/* Default Links */
+a {
+	color: #000;
+    text-decoration: underline;
+}
+
+/* Eigenschaften für den Inhaltsbereich */
+#contentarea {
+    padding-top: 81px;
+    margin-left: 177px;
+    min-width: 820px;
+}
+
+/* Überschriften */
+#headlines {
+    clear: both;
+	/* height: 48px; */
+    margin-left: 0;
+    padding-top: 19px;
+	padding-bottom: 7px;
+}
+
+#headlines h2 {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+#headlines h2#subheadline {
+    color: #666;
+}
+
+/* Position/Dimension Inhaltsbereich */
+#content {
+	margin-bottom: 7px;
+    clear: both;
+    overflow: visible;
+}
+
+/* Allgemeine Eigenschaften Listen */
+#content ul{
+    list-style: disc;
+}
+
+#content ol {
+    list-style: decimal;
+}
+
+#content ul,ol {
+    padding-left: 18px;
+}
+
+/* Formatierung der Inhaltselemente */
+#content h3 {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#content strong {
+    font-weight: bold;
+}
+
+#content p, #content h4, #content li {
+    margin-bottom: 5px;
+}
+
+/* Spaltenlayout */
+div.col1, div.col2, div.col3, div.col4, div.col5, div.col6, div.col7,
+div.col1first, div.col2first, div.col3first, div.col4first, div.col5first, div.col6first, div.col7first {
+    float: left;
+    display: inline;
+    overflow: hidden;
+	margin: 0 7px 0 0;
+}
+
+div.col1 { width: 128px; }
+div.col2 { width: 263px; }
+div.col3 { width: 398px; }
+div.col4 { width: 533px; }
+div.col5 { width: 668px; }
+div.col6 { width: 803px; }
+div.col7 { width: 973px; }
+
+div.col1first { width: 163px; }
+div.col2first { width: 298px; }
+div.col3first { width: 433px; }
+div.col4first { width: 568px; }
+div.col5first { width: 703px; }
+div.col6first { width: 838px; }
+div.col7first { width: 973px; }
+
+/* Variation ohne Navigation (<body class="nonavigation">) */
+body.nonavigation {
+    padding-left: 0;
+    background-image: none;
+}
+
+body.nonavigation #contentarea {
+    min-width: 1014px;
+}
+
+body.nonavigation #contentarea {
+    margin-left: 0px;
+}
+
+body.nonavigation #content,
+body.nonavigation #footer,
+body.nonavigation #headlines {
+    margin-left: 7px;
+}
+
+/* Variation ohne Portalheader (<body class="noheader">) */
+body.noheader {
+    padding-top: 0;
+	background-position: 0 -89px;
+}
+
+body.noheader #contentarea {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Loading indicator */
+#loader {
+    position: fixed;
+    top: 107px; 
+    left: 6px; 
+    width: 20px; 
+    height: 20px; 
+    z-index: 351;
+    background: transparent url(../img/ajax-loader_bmw.gif) no-repeat center center; /* BMW Specific */
+}
+
+/* Portal Iframe */
+#iframecontent {
+    border: medium none;
+    margin-top: 89px;
+    padding: 0;
+    width: 100%;
+}
+
+/* Userinfo */
+#userinfo {
+    font-size: 12px;
+    left: 0;
+    position: absolute;
+    text-align: right;
+    top: 15px;
+    width: 980px;
+}
+
+/* Pagination Controls */
+a.pagination-first, a.pagination-previous,
+a.pagination-next, a.pagination-last {
+    background: #FFF url(../img/pagination_bmw.png) no-repeat 0 0; /* BMW Specific */
+    height: 7px;
+    width: 6px;
+    text-indent: 200px;
+    overflow: hidden;
+	margin-top: 25px;
+    margin-left: 3px;
+    text-decoration: none !important;
+    display: block;
+    float: right;
+}
+
+a.pagination-last {
+	margin-right: 7px;
+}
+
+a.pagination-first {background-position: 0 0;}
+a.pagination-previous {background-position: -10px 0;margin-left:4px;margin-right:4px;}
+a.pagination-next {background-position: -18px 0;margin-left:4px;margin-right:-1px;}
+a.pagination-last {background-position: -26px 0;}
+
+a.pagination-first:hover {background-position: 0 -7px;}
+a.pagination-previous:hover {background-position: -10px -7px;margin-left:4px;margin-right:4px;}
+a.pagination-next:hover {background-position: -18px -7px;margin-left:4px;margin-right:-1px;}
+a.pagination-last:hover {background-position: -26px -7px;}
+
+span.pagination-pages {
+    float: right;
+    margin-top: 21px;
+}
+
+span.pagination-pages a, span.pagination-pages a:visited {
+	color: #666;
+    margin: 0 3px 0 0;
+    text-decoration: none !important;
+}
+
+span.pagination-pages a:hover {
+	color: #039; /* BMW Specific */
+}
+
+span.selected-page {
+	color: #039; /*BMW Specific */
+    font-weight: bold;
+    margin: 0 3px 0 0;
+}
+
+span.pagination-label {
+	color: #666;
+    margin-top: 21px;
+	margin-right: 7px;
+    float: right;
+}
+
+/* Eigenschaften für Container */
+#content .container {
+	line-height: 14px;
+    border: 1px solid #999;
+    background-color: #FFF;
+    margin-bottom: 7px;
+}
+
+#content .container h3 {
+    background-color: transparent;
+    border-bottom: 1px solid #999;
+    color: #000;
+    font-size: 12px;
+	font-weight: bold;
+    margin: 0 6px;
+    padding: 3px 0 3px 0;
+}
+
+/* Fix zur Positionierung des RSS-Icons */ 
+#content .container h3 img{
+	margin-left: 4px;
+	margin-top: 1px;
+	margin-bottom: -1px;
+}
+
+#content .container .container-content {
+    padding: 0px 6px 0px 6px;
+    overflow: hidden;
+	margin-top: 10px;
+	margin-bottom: 7px;
+}
+
+/* minimierte Container */
+#content .container.minimized  h3{
+    border-bottom: none;
+}
+
+#content .container-content.minimized {
+	display: none;
+}
+
+/* geschlossene Container */
+#content .container.closed {
+	display: none;
+}
+
+/* Integrierte Fenster (modifiziertes portlets.html -> integrierte_fenster.html) */
+#content .container .integrated-window {
+    background: #FFF url(../img/portlet_title_bg_bmw.png) repeat-x; /* BMW Specific */
+    border-bottom: 1px solid #999;
+}
+
+#content .container .integrated-window h3 {
+    background-color: transparent;
+	color: #FFF;
+	border-bottom: none;
+    padding: 4px 0 4px 0;
+}
+
+#content .container.minimized .integrated-window {
+    border-bottom: none;
+}
+
+/* Icons */
+#content ul.container-icons {
+    float: right;
+	margin-right: 4px;
+}
+
+#content ul.container-icons li {
+    float: left;
+    list-style: none;
+    margin: 2px;
+    padding: 0;
+}
+
+#content ul.container-icons li a {
+	margin: 2px 0px 2px -1px;
+	width: 13px;
+	height: 12px;
+    display: block;
+    overflow: hidden;
+	text-indent: -500px;
+}
+
+/* nicht angezeigte Icons */
+#content ul.container-icons li.icon-inactive {
+	display: none;
+}
+
+/* Portlet-Icons Grafiken: Die Datei enthält 9 Portlet-Icons mit der Breite 13px (Start bei
+ * Pixel 0 bis 104) und 2 Tabellen-Icons (Start bei Pixel 117 und 130) für dynamische Tabellen.
+ * Hier werden bisher nur die 9 Portlet-Icons definiert
+ */
+ /* BMW Specific */
+#content ul.container-icons a.container-info { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat 0px 0px; }
+#content ul.container-icons a.container-reload { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -13px 0px; }
+#content ul.container-icons a.container-help { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -26px 0px; }
+#content ul.container-icons a.container-edit { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -39px 0px; }
+#content ul.container-icons a.container-close { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -52px 0px; }
+#content ul.container-icons a.container-forward { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -65px 0px; }
+#content ul.container-icons a.container-back { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -78px 0px; }
+#content ul.container-icons a.container-max { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -91px 0px; }
+#content ul.container-icons a.container-min { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -104px 0px; }
+
+#content ul.container-icons a.container-info:hover { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat 0px -12px; }
+#content ul.container-icons a.container-reload:hover { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -13px -12px; }
+#content ul.container-icons a.container-help:hover { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -26px -12px; }
+#content ul.container-icons a.container-edit:hover { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -39px -12px; }
+#content ul.container-icons a.container-close:hover { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -52px -12px; }
+#content ul.container-icons a.container-forward:hover { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -65px -12px; }
+#content ul.container-icons a.container-back:hover { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -78px -12px; }
+#content ul.container-icons a.container-max:hover { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -91px -12px; }
+#content ul.container-icons a.container-min:hover { background: #FFF url(../img/portlet_icons_bmw.png) no-repeat -104px -12px; }
+
+/* News-Container */
+#content div.news  {
+	padding-top: 0px;
+	padding-bottom: 16px;
+}
+
+#content div.news div.image {
+	float: right;
+	margin-top: 3px;
+	margin-left: 7px;
+}
+
+#content div.news div.text {
+	margin-right: 135px;
+}
+
+#content div.news div.text h4 {
+	font-weight: bold;
+}
+
+#content div.news div.text span.date {
+	display: block;
+	font-size: 12px;
+	color: #666;
+	margin-bottom: 4px;
+}
+
+/* Mit newsdummy wird der untere Rand des Containers hochgezogen */
+#content div.container-content div.newsdummy {
+	margin-bottom: -11px;
+}
+
+/*tagcoud element ist für tag clouds mit unterschiedlich grosser Schrift und entfernt die fixe Zeilenhoehe*/
+#content .tagcloud {
+	line-height:normal;
+}
+
+/* Tabellen */
+table {
+	border: 0; border-collapse: collapse;
+}
+
+td, th {
+	line-height: 14px;
+    margin: 0; padding: 0; vertical-align: top;
+    color: #000;
+    border-left: 1px solid #FFF;
+}
+
+/* 16px padding added */
+td.col1, th.col1 { width: 117px; }
+td.col2, th.col2 { width: 251px; }
+td.col3, th.col3 { width: 385px; }
+td.col4, th.col4 { width: 519px; }
+td.col5, th.col5 { width: 654px; }
+td.col6, th.col6 { width: 787px; }
+td.col7, th.col7 { width: 922px; }
+
+td.hcol1, th.hcol1   { width:  53px; }
+td.hcol3, th.hcol3   { width: 173px; }
+td.hcol5, th.hcol5   { width: 293px; }
+td.hcol7, th.hcol7   { width: 413px; }
+td.hcol9, th.hcol9   { width: 533px; }
+td.hcol11, th.hcol11 { width: 653px; }
+td.hcol13, th.hcol13 { width: 773px; }
+
+/* Table Data */
+table.data td {
+	padding: 3px 7px;
+}
+
+table.data th {
+	background-color: transparent;
+	text-align: left;
+	font-weight: bold;
+	border-bottom: 1px solid #666;
+	padding: 2px 6px;
+}
+
+table.data tr.even td { background-color: #F2F2F2; }
+th.right, td.right { text-align: right; }
+th.center, td.center { text-align: center; }
+th.left, td.left { text-align: left; }
+
+td input, td textarea, td select, td button {
+	margin: 3px 0;
+	vertical-align: middle;
+}
+
+/* Eigenschaften für Tab-Container */
+#content div.tabcontainer ul.tabs {
+	display: block;
+	overflow: auto;
+	list-style: none;
+    padding-left: 0;
+}
+
+#content div.tabcontainer ul.tabs li {
+	float: left;
+    margin: 0 7px 0 0;
+	overflow: hidden;
+    display: block;
+}
+
+#content div.tabcontainer ul.tabs li.ui-state-default a,
+#content div.tabcontainer ul.tabs li.ui-state-default a:visited {
+	height: 14px;
+	overflow: hidden;
+    padding-left: 7px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    display: block;
+    text-decoration: none !important;
+	background: transparent url(../img/tabs.png) right -19px no-repeat;
+	color: #666;
+    border-left: 1px solid #999;
+    position: relative;
+}
+
+#content div.tabcontainer ul.tabs li.ui-state-hover a:hover {
+	color: #039; /* BMW Specific */
+}
+
+#content div.tabcontainer ul.tabs li.ui-tabs-selected a,
+#content div.tabcontainer ul.tabs li.ui-tabs-selected a:visited {
+	background: transparent url(../img/tabs.png) right 0px no-repeat;
+	color: #039; /* BMW Specific */
+	cursor: default;
+}
+
+#content div.tabcontainer ul.tabs li.large_398px {
+	width: 398px;
+}
+#content div.tabcontainer ul.tabs li.large_128px {
+	width: 128px;
+}
+#content div.tabcontainer ul.tabs li.small_83px {
+	width: 83px;
+}
+#content div.tabcontainer ul.tabs li.small_38px {
+	width: 38px;
+}
+#content div.tabcontainer ul.tabs li.last {
+	margin-right: 0px;
+}
+
+#content div.tabcontainer ul.tabs li a{
+padding-right: 5px;
+}
+
+#content div.tabcontainer div.tabcontent {
+	line-height: 14px;
+	margin-top: -1px;
+	margin-bottom: 7px;
+    border: 1px solid #999;
+    padding: 6px 7px 7px 7px;
+    overflow: hidden;
+    clear: both;
+}
+
+/* Tab view mit neuem JavaScript. display: none; ist unerlässlich */
+#content div.tabcontainer div.tabcontent.ui-tabs-hide {
+	display: none;
+}
+
+/* Akkordeon-Tabs */
+#content .accordion-content {
+	height: 0px;
+	visibility: hidden;
+	border: none;
+    display: none;
+}
+
+#content .accordion-content-selected {
+	height: 205px;
+	visibility: visible;
+    display: block;
+	overflow: hidden;
+	white-space: normal;
+	padding-left: 5px;
+	padding-top: 5px;
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+}
+
+#content div.accordion-header {
+	height: 17px;
+	font-size: 12px;
+	vertical-align: middle;
+	cursor: pointer;
+	padding-left: 6px;
+	padding-top: 2px;
+	text-decoration: none;
+	color: #666;
+	background: url("../img/accordiontabs.png") 0 -57px no-repeat;
+}
+
+#content div.accordion-header.next-closed-tab {
+	background: url("../img/accordiontabs.png") 0 -76px no-repeat;
+}
+
+#content div.accordion-header-selected {
+	color: #039; /* BMW Specific */
+	background: url("../img/accordiontabs.png") 0 -38px no-repeat;
+	cursor: default;
+}
+
+#content div #accordion-header.accordion-header{
+	background: url("../img/accordiontabs.png") 0 -19px no-repeat;
+}
+
+#content div #accordion-header.accordion-header-selected {
+	background: url("../img/accordiontabs.png") 0 -0px no-repeat;
+}
+
+#content div.accordion-header:hover {
+	text-decoration: none;
+	color: #039; /*BMW Specific */
+}
+
+#accordion{
+	top: 0px;
+	left: 0px;
+	width: 263px;
+	border-bottom: solid 1px #999;
+	margin-bottom: 7px;
+}
+
+/* Fusszeile */
+#footer {
+	padding-top: 4px;
+	padding-left: 7px;
+    clear: both;
+}
+
+#footer p {
+	font-size: 11px;
+	line-height: 13px;
+    color: #666;
+}
+
+#footer a, footer a:visited {
+	color: #666;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/* header.css: Layout des Headers */
+
+/* screen_header.css: Eigenschaften fuer den Kopfbereich */
+
+/* Formatierung */
+#header-logo img {
+    display: none; /* nur print */
+}
+#header-logo {
+    background: transparent url(../img/bmw_group_logo_bmw_de.png) no-repeat; /* BMW Specific */
+    position: fixed; _position: absolute;
+    top: 0px; /* BMW Specific */
+    left: 860px; /* BMW Specific */
+    width: 242px;
+    height: 50px; /* BMW Specific */
+    z-index: 1001;
+}
+#header {
+    background: url(../img/bmw_ngi_header_bmw_01.jpg) no-repeat bottom left; /* BMW Specific */
+    height: 89px;
+    width: 4000px;
+    position: fixed;
+    z-index: 850;
+    left: 0;
+    top: 0;
+}
+#header-title {
+	color: #FFFFFF;
+	font-size: 16px;
+	left: 14px;
+	position: fixed;
+	top: 26px;
+	z-index: 1010;
+}
+#header-subtitle {
+    position: fixed; _position: absolute;
+    top: 2.333em; left: 177px; z-index: 1010;
+    color: #999;
+    display: none;
+}
+#header #personalization {
+    font-size: 10px;
+    position: fixed; _position: absolute;
+    top: 30px;
+    left: 20px;
+    z-index: 1010;
+    color: #369;
+}
+#header p { display: none; }
+
+#navigation-wrapper {
+    background: transparent url(../img/ShadowPortalNavigation.png) repeat-x top left;
+    height: 32px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 57px;
+	z-index: 1009;
+}
+
+/* Variation Minimierter Portalheader (<body class="smallheader">) */
+
+body.smallheader #header {
+    height: 2.917em; background: #FFF;
+}
+body.smallheader #header * {
+    display: none;
+}
+body.smallheader #header iframe {
+    display: block;
+}
+body.smallheader #header-logo {
+    display: none;
+}
+
+
+/* screen_portalheader.css: Eigenschaften fuer die Portalheader-Menueleisten */
+
+/* Nicht benoetigt f?r media!=screen */
+
+#portalheader h3 {
+    display: none;
+}
+
+/* Positionen / Dimensionen */
+
+#portalheader {
+    position: fixed; top: 0; left: 0; z-index: 1009;
+    width: 100%;
+}
+#metanavigation {
+    position: absolute; top: 4px; left: 0; z-index: 1050;
+    width: 4815px;
+}
+#portalheader ul {
+     height: 1.417em;
+    display: block;
+}	
+#metanavigation ul {
+    background:none repeat scroll 0 0 transparent;
+	color:#336699;
+	list-style-type:none;
+	margin-left:14px;
+	margin-top:2px;
+}
+#metanavigation li {
+    margin: 0;
+    padding-right: 21px;
+    /*background: transparent url(../img/arrow_white.gif) no-repeat 0 4px;*/
+}
+
+#meta-menu li.haschildren ul li{
+	display: block !important;
+	float: none !important;
+	line-height: 13px;
+	vertical-align: bottomline;
+}
+
+#portalnavigation {
+    position: absolute; top: 0; left: 0; z-index: 1049; margin-top: 8em;
+    width: 4815px;
+}
+#portalnavigation ul {
+    background: #000 url(../img/portalheader_background_navigation.gif) repeat-y; color: #FFFFFF;
+}
+
+/************************ Portal Menu **************************/
+#top-navigation {padding:0; margin:3px 0 0 0; list-style:none; position:absolute; top: 0; left: 0; height:25px; float:left;}
+
+#top-navigation li {display:inline; float:left; background: transparent; margin: 0 -2px 0 0;}
+#top-navigation li ul li {float: none; display: block;}
+#top-navigation li.first {margin-left: 4px; margin-right: -3px;}
+#top-navigation li.first a.top{width: 173px; margin-left: 0; background: transparent url(../img/ActiveTab1.png) no-repeat -200px 0;}
+#top-navigation li.first a.hover, #top-navigation li.first.active > a {margin-right: 0px; background: transparent url(../img/ActiveTab1.png) no-repeat -4px 2px;}
+
+#top-navigation a.top, #top-navigation li.active > a{
+	display:block; 
+	height:46px; 
+	text-decoration:none; 
+	line-height:45px; 
+	font-size:14px; 
+	text-indent:-4px; 
+	width: 137px; 
+	text-align: center; 
+	margin-top: -10px; 
+	background: transparent url(../img/ActiveTab2.png) no-repeat 0 -200px;
+	z-index: 1010;
+	position: relative;
+	color: #666;
+}
+#top-navigation li.active > a, #top-navigation a.haschildren:hover , #top-navigation a.hover {
+	background-position: -5px 2px; 
+	width: 149px; 
+	margin-left: -6px; 
+	margin-right: -6px;
+}
+
+#top-navigation a.hover {
+	z-index: 2000 !important;
+	position: relative;
+}
+
+#top-navigation dd a {
+	color: #666;
+}
+
+#top-navigation li ul {
+	background: white; 
+	background:url(../img/dropdownShadow.png) no-repeat scroll right bottom transparent;
+	padding-right: 5px;
+	padding-bottom: 8px;
+	padding-left: 3px;
+	padding-top: 12px;
+	width: 142px;
+	left: -7px;
+	top: -8px;
+	position: relative;
+
+	margin-right: -20px;
+}
+
+#top-navigation li.first ul {
+	left: 0px;
+	width: 163px;
+	background:url(../img/dropdownShadowFirst.png) no-repeat scroll right bottom transparent;
+}
+
+#top-navigation li.first ul li ul {
+	left: -7px;
+	width: 135px;
+	background:url(../img/dropdownShadow2ndLevel.png) no-repeat scroll right bottom transparent;
+}
+
+#top-navigation li ul li {
+	padding-bottom: 9px;
+}
+
+#top-navigation ul li {
+	margin: 0;
+}
+
+#top-navigation li ul li a {
+	/* width: 135; */
+	display: block;
+	margin-left: 14px;
+	z-index: 1095;
+	line-height: 14px;
+	color: #666;
+	padding-right: 20px;
+}
+
+#top-navigation li ul li ul li a, #top-navigation li ul li ul li ul li a {
+	width: 121px;
+	padding-right: 40px;
+
+}
+
+#top-navigation li ul li ul {
+	background:url(../img/dropdownShadow2ndLevel.png) no-repeat scroll right bottom transparent;
+	width: 135px;
+	position: absolute;
+	display: none;
+}
+
+#top-navigation li ul li ul{
+	padding-top: 0px;
+}
+
+#top-navigation li ul li.subfirst{
+	padding-top: 12px;
+	border-top: 1px solid #e9e9e9;
+}
+
+#top-navigation li span.toplevelimage {
+	padding-right: 14px;
+	background: transparent url(../img/arrow_meta_grey.gif) no-repeat right center;
+}
+
+#top-navigation li span.toplevelimagehover {
+	background: transparent url(../img/arrow_meta_blue_bmw.gif) no-repeat right center;
+	color: #039; /* BMW Specific */
+}
+
+#top-navigation a.top:hover { color: #039; } /* BMW Specific */
+#top-navigation li.first.active > a {background-position: -4px 2px; margin-right: 0px;}
+
+#top-navigation a, #top-navigation a:visited {text-decoration: none;}
+#top-navigation a.top:hover, #top-navigation div.sub a:hover, #top-navigation li.active > a {text-decoration: none; color: #039 !important;} /* BMW Specific */
+
+#top-navigation a.nolink,
+#top-navigation a.nolink:visited {text-decoration: none !important;}
+
+#top-navigation div.sub {display:none; background:transparent url(../img/sub_navigation_shadow.png) no-repeat left bottom; top:28px; padding-bottom: 7px; padding-right: 4px;padding-left:3px;margin-left: -1px;}
+#top-navigation li.first div.sub {margin-left: 0;}
+#top-navigation li div.relative {margin-left: -4px;}
+
+#top-navigation a:hover { color: #039; } /* BMW Specific */
+
+#top-navigation a.dropdown {
+	background:transparent url(../img/arrow_grey.gif) no-repeat 113px 3px;
+}
+
+#top-navigation li ul li ul a.dropdown {
+	background:transparent url(../img/arrow_grey.gif) no-repeat 106px 3px;
+}
+
+#top-navigation li.first a.dropdown {
+	background:transparent url(../img/arrow_grey.gif) no-repeat 134px 3px;
+}
+
+#top-navigation li.first ul li ul li a.dropdown {
+	background:transparent url(../img/arrow_grey.gif) no-repeat 107px 3px;
+}
+
+#top-navigation a.highlighted { 
+	color: #039; /* BMW Specific */
+	background:transparent url(../img/arrow_blue_down_bmw.gif) no-repeat 112px 5px; /* BMW Specific */
+}
+
+#top-navigation li ul li ul a.highlighted {
+	background:transparent url(../img/arrow_blue_down_bmw.gif) no-repeat 105px 5px; /* BMW Specific */
+}
+
+#top-navigation li.first a.highlighted { 
+	color: #039; /* BMW Specific */
+	background:transparent url(../img/arrow_blue_down_bmw.gif) no-repeat 132px 5px; /* BMW Specific */
+}
+
+#top-navigation li.first ul li ul li a.highlighted { 
+	color: #039; /*BMW Specific */
+	background:transparent url(../img/arrow_blue_down_bmw.gif) no-repeat 105px 5px; /* BMW Specific */
+}
+
+/* Navigation Tab Width */
+#top-navigation div.col1 { width: 130px; }
+#top-navigation div.col2 { width: 267px; }
+#top-navigation div.col3 { width: 404px; }
+#top-navigation div.col4 { width: 541px; }
+#top-navigation div.col5 { width: 672px; }
+#top-navigation div.col6 { width: 811px; }
+#top-navigation div.col7 { width: 981px; }
+
+#top-navigation div.left {left: 6px;}
+
+#top-navigation div.wrapper { min-height: 210px; background-color: #fff; padding:11px 0 10px 7px; border: 1px solid #D6D6D6; border-width: 1px 0 0 0; z-index: 1012; position: relative;}
+
+#top-navigation li.hover div.sub {display: block; position: absolute;}
+
+#header .clear {clear:both;}
+
+#top-navigation div.sub h2 {margin-bottom: 5px; font-size: 14px; color: #369; font-weight: bold;}
+#top-navigation div.list {float: left; margin-right: 7px; margin-bottom: 10px;}
+#top-navigation div.list.last {margin-right: 0;}
+
+/** Dropdown Column Width **/
+#top-navigation div.sub div.first { width: 156px !important; }
+#top-navigation div.sub div.list, #top-navigation div.sub div.col1 { width: 128px; }
+#top-navigation div.sub div.col2 { width: 263px; }
+#top-navigation div.sub div.col3 { width: 404px; }
+#top-navigation div.sub div.col4 { width: 541px; }
+#top-navigation div.sub div.col5 { width: 672px; }
+#top-navigation div.sub div.col6 { width: 811px; }
+#top-navigation div.sub div.col7 { width: 974px; }
+
+#top-navigation div.list dl {height: 195px; float: left; margin-bottom: 5px; width: 128px;}
+#top-navigation div.sub div.first dl {width: 156px;}
+#top-navigation div.list p.more { display: block; font-size: 11px; }
+#top-navigation div.sub h3, #top-navigation div.sub dt {font-size: 12px; letter-spacing: -0.5px; padding-bottom: 3px; font-weight: bold; margin-bottom: 5px; text-align: left;}
+#top-navigation div.sub dd {font-size: 11px;}
+#top-navigation div.sub dl.paddedSubNavDl {padding-left: 7px;}
+
+#top-navigation div.sub dd.last {border-top: 1px solid #93AEC9; margin-left: 0px; padding-left: 5px; padding-top: 5px;}
+
+#top-navigation div.details-container {width: 450px; height: 200px; float: right; color: #369;}
+#top-navigation div.details-container img {float: left; margin: 0 20px 10px 0;}
+#top-navigation div.details-container h3 {margin: 0; padding: 0; font-size: 14px;}
+#top-navigation div.details-container p {font-size: 12px;}
+#top-navigation div.details-container .details_title {font-size: 13px; font-weight: bold; display: block; margin-bottom: 5px;}
+
+/************************ Portal Menu **************************/
+
+/* Ebene 1: Horizontale Anordnung */
+
+#portalnavigation a, #metanavigation a,
+#portalnavigation span, #metanavigation span {
+    font-size: 11px;
+    line-height: 100%;
+}
+
+#metanavigation a:hover, #meta-menu a.hover {
+	color: #FFF;
+    text-decoration: underline;
+}
+
+#portalheader li {
+    float: left;
+    position: relative;
+    display: inline;
+    margin-right: 0;
+}
+
+div.portalheaderscroll {
+    overflow: hidden;
+    position: absolute;
+}
+
+#portalheader li a, #portalheader li span {
+    display: inline;
+    margin: 1px 0;
+    padding: 1px 0 3px 0;
+    color: #FFF;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#portalheader li img {
+    display: inline;
+    margin: 0px 5px;
+	cursor: pointer;
+}
+
+
+#portalheader li.haschildren {
+    z-index: 1;
+	padding-right: 0px;
+	margin-right: 21px;
+}
+
+#metanavigation ul li ul li a,
+#portalnavigation li ul li span {
+	color: #666666;
+	padding-top: 0;
+	white-space: nowrap;
+	line-height: 15px;
+}
+
+#metanavigation ul li ul li {
+	padding-right: 0px;
+	margin-right: 7px;
+	white-space: nowrap;
+}
+
+#portalnavigation li ul li a:hover, #metanavigation li ul li a:hover {
+    text-decoration: none;
+	color: #039; /* BMW Specific */
+}
+
+#portalheader li.haschildren li span {
+	color: #000000;
+}
+
+#portalheader li ul {
+	background:url(../img/ShadowMetaNavigation.png) no-repeat scroll right bottom transparent;
+    position: absolute; 
+	left: -7px;
+    height: auto;
+	padding: 1px 5px 9px 7px;
+	margin-left: 0px;
+	top: -3px;
+	display: none;
+}
+
+#portalheader li ul li {
+	padding-right: 0px;
+}
+
+/* Variation Minimierter Portalheader (<body class="smallheader">) */
+
+body.smallheader #portalnavigation {
+    margin-top: 1.5em;
+}
+
+
+/* Variation ohne Portalheader (<body class="noheader">) */
+
+body.noheader #portalheader,
+body.noheader #header,
+body.noheader #header-logo {
+    display: none;
+}
+
+/****************** TODO ******************************************************************/
+/* Suchbox */
+#search-box {
+    left: 706px;
+    padding: 22px 13px 5px 11px;
+    position: absolute;
+    top: 40px;
+}
+.focused {color: #000 !important;}
+#search-box.focused #global-search-input {
+    border-bottom-style: none;
+}
+#search-box form {
+    margin: 0;
+    padding: 0;
+    width: 263px;
+}
+
+/* still uses sub navigation bg-image -> change it to search_suggest_shadow.png? */
+#search-box .sub {
+    z-index: 9999;
+    display: none;
+    background: transparent url(../img/sub_navigation_shadow.png) no-repeat bottom right;
+    padding-bottom: 6px;
+    padding-right: 5px;
+    margin-left: 12px;
+    border-top: 1px solid #EFEFEF;
+}
+
+#search-box .sub .wrapper {
+    height: 70px;
+    background: transparent url(../img/search_options_background.png) repeat-x bottom left;
+    padding: 20px 30px;
+    border-left: 1px solid #EFEFEF;
+}
+
+#global-search-input {
+    float: left;
+    padding-top: 0px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+    width: 233px;
+	height: 21px;
+    border: none;
+	background: transparent url(../img/searchBody.png) no-repeat top left;
+}
+
+a#global-search-trigger, a#global-search-trigger:visited {
+    text-indent: -5000px;
+    overflow: hidden;
+    background: transparent url(../img/searchButton.png) no-repeat top left;
+    width: 24px;
+    height: 21px;
+    display: block;
+    float: left;
+}
+
+#search-results-wrapper {
+    width: 263px;
+    z-index: 9998;
+    display: none;
+    background: #fff;
+    margin-left: -3px;
+    margin-top: -1px;
+    background:transparent url(../img/search_suggest_shadow.png) no-repeat scroll right bottom;
+    padding-bottom: 6px;
+    padding-right: 5px;
+	padding-left: 3px;
+	overflow: hidden;
+}
+
+#search-results {
+    padding-bottom: 11px;
+}
+
+#search-results-arrow {
+	width: 268px;
+	height: 7px;
+	position: absolute;
+	background: transparent url(../img/searchArrow.png) no-repeat top left;
+	border: none;
+	margin-top: -7px;
+}
+
+#search-box.focused #search-results-wrapper {
+    display: block;
+}
+#search-results h2 {
+    display: block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 7px;
+	padding: 8px 0 1px;
+    font-weight: bold;
+	/* border-bottom: 1px solid #D6D6D6; */
+    background: transparent url(../img/ajax-loader_bmw.gif) no-repeat -100px 0; /* BMW Specific */
+}
+
+#SuggestGoogleIntranetSearchTitle {
+	padding-top: 7px !important;
+}
+
+#SuggestNetworkSearchTitle {
+	padding-bottom: 0px !important;
+}
+
+#search-results h2.loading {
+    background-position: 230px 8px;
+}
+#search-results div.results {
+    /*padding: 7px;*/
+}
+#search-results a.title, #search-results a.title:visited {
+    padding-right: 14px;
+    /*background: transparent url(../img/search_results_link.gif) no-repeat 100% 70%;*/
+    text-decoration: none;
+    color: #666;
+}
+#search-results a.title:hover {
+	color: #039; /* BMW Specific */
+}
+
+#search-results .search-results-separator {
+    height: 1px;
+    width: 247px;
+    margin: 0 auto;
+}
+#search-results .right {
+    text-align: right;
+}
+#search-results p.more {
+    display: block;
+    text-align: right;
+	margin-top: 3px;
+	margin-bottom: -2px;
+}
+#search-results a.more-link, #search-results a.more-link:visited {
+    padding-left: 7px;
+    background: transparent url(../img/arrow_grey.gif) no-repeat center left;
+    color: #666;
+    text-decoration: none;
+    margin: 7px;
+    font-size: 11px;
+}
+#search-results a.more-link:hover {
+    color: #039; /* BMW Specific */
+	background: url("../img/arrow_blue_bmw.gif") no-repeat scroll left center transparent; /* BMW Specific */
+}
+#search-results p.notification {
+    margin: 4px 7px 11px;
+    font-style: italic;
+    color: #999999;
+}
+#search-closer-div {
+    /*height: 20px;*/
+	display: none;
+}
+.search-closer-hover, a#search-close-button:hover {
+    background-position: 0 0 !important;
+}
+a#search-close-button, a#search-close-button:visited, #search-closer {
+    /*cursor: pointer;
+    background: transparent url(../img/search_results_close.png) no-repeat 0 -12px;
+    text-indent: -200px;
+    width: 24px;
+    height: 12px;
+    position: absolute;
+    bottom: 11px;
+    right: 14px;
+    overflow: hidden;*/
+	display: none;
+}
+
+a#search-close-button:hover {
+    background-position: 0 0 !important;
+}
+.search-result-item {
+    background: #fff url(../img/search_results_highlight.png) repeat-x 0 -1000px;
+    padding: 0 7px;
+}
+.search-result-item div.item-content {
+    padding: 4px 0 5px;
+    border-top: 1px solid #D6D6D6;
+}
+
+.search-result-item div.first {
+    border-top: none;
+}
+#search-results .hidden {
+    display: none;
+}
+#search-results div.hover {
+    /*background-position: bottom left;*/
+}
+#search-results div.hover .hidden {
+    display: block;
+}
+.search-result-item * {
+    color: #000;
+}
+.search-result-dept {
+    float: right;
+}
+.search-result-item .light {
+    color: #b2b2b2;
+}
+.search-result-item .emphasized * {
+    font-weight: bold !important;
+}
+
+a#global-search-options-trigger, a#global-search-options-trigger:visited {
+    text-indent: -5000px;
+    overflow: hidden;
+    width: 12px;
+    height: 21px;
+    display: block;
+    float: left;
+}
+
+a#global-search-options-trigger:active {
+    background-position: 0 -21px;
+}
+
+#global-search-options {
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 305px;
+    height: 60px;
+    margin-left: -43px;
+    background: transparent url(../img/sub_navigation_shadow.png) no-repeat bottom right;
+    padding-bottom: 6px;
+    padding-right: 5px;
+    border-top: 1px solid #EFEFEF;
+    border-left: 1px solid #EFEFEF;
+}
+
+#search-box .visible {
+    display: block;
+}
+
+#global-search-options dl {
+    background: #efefef url(../img/search_options_background.png) repeat-x 0 0;
+    height: 40px;
+    padding: 10px;
+}
+
+#global-search-options dd {
+    float: left;
+    width: 140px;
+    display: inline;
+    height: 22px;
+    line-height: 22px;
+}
+
+#global-search-options dd label {
+    color: #369;
+}
+
+.clear {
+    width: 100%;
+    height: 1px;
+    margin: 0 0 -1px;
+    clear: both;
+}
+
+#border-helper {
+    display: none;
+    width: 125px;
+    height: 1px;
+    background-color: #fff;
+    position: fixed;
+    top: 87px;
+    left: 312px;
+    z-index: 9999;
+}
+
+/* navigation.css: Layout der Navigation */
+
+/***** navigation div *****/
+div#navigation {
+	position: absolute;
+	left: 0;
+	top: 75px;
+	padding: 0;
+	z-index: 2;
+	width: 170px;
+	overflow: hidden;
+}
+
+/** hide headings on screen **/
+#navigation h2, #navigation h3 {
+	display: none;
+}
+
+/***** navigation types: tree navigation/history navigation *****/
+/** tree navigation **/
+div#tree-navigation {
+	padding-top: 70px;
+	margin-left: 7px;
+}
+
+/** history navigation **/
+#history-navigation {
+    padding-top: 9px;
+    margin-left: 7px;
+}
+
+#history-navigation ul#backlinks {
+    padding-top: 61px;
+    margin-bottom: 14px;
+}
+
+#history-navigation ul#backlinks li {
+	margin-bottom: 2px;
+}
+
+#history-navigation ul#backlinks li a {
+	padding-bottom: 3px;
+	padding-left: 7px;
+}
+
+#history-navigation #backlinks a {
+    font-weight: bold;
+    border-bottom: 1px solid #999999;
+    margin-left: 0;
+    padding: 2px 5px 4px 0;
+    margin-right: 0;
+}
+
+/***** list styling for both types *****/
+/** first level (and below, if not overridden) **/
+#navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#navigation ul li {
+	margin-bottom: 5px;
+}
+
+#navigation ul li a {
+	margin-left: 7px;
+	padding: 2px 14px 7px 10px;
+}
+
+#navigation ul li a, #navigation ul li span {
+	color: #666666;
+	display: block;
+	font-size: 12px;
+	line-height: 14px;
+	text-decoration: none;
+}
+
+/** BMW Specific color blue for open/active links and on mouseover **/
+#navigation ul li a.active,
+#navigation ul li a.open,
+#navigation ul li a:hover {
+	color: #039; /* BMW Specific */
+}
+
+/** items with children **/
+#navigation ul li a.haschildren {
+	background: transparent url(../img/navigation_arrows_bmw.png) no-repeat -1px 2px; /* BMW Specific */
+	padding-left: 10px;
+}
+#navigation ul li a.haschildren:hover {
+	background: transparent url(../img/arrow_blue_bmw.gif) no-repeat -1px 5px; /* BMW Specific */
+}
+#navigation ul li a.open:hover {
+	background: transparent url(../img/navigation_arrows_bmw.png) no-repeat 0 -82px; /* BMW Specific */
+}
+
+/** active links **/
+#navigation ul li a.active {
+	padding-bottom: 13px;
+	margin-bottom: -6px;
+}
+
+/** opened items with children **/
+#navigation ul li a.open {
+	background-position: 0 -82px;
+	padding-left: 17px;
+	margin-bottom: 5px;
+}
+
+/*
+#navigation ul li a.active.open {
+	margin-bottom: -1px;
+}
+*/
+
+/** Active item, defaults for all levels **/
+#navigation ul li.active {
+	background: transparent url(../img/navigation/navigation_highlight_top.png) no-repeat right top;
+	margin-left: -11px;
+	margin-top: -8px;
+	padding-top: 8px;
+}
+#navigation ul li.active.open {
+	background-image: url(../img/navigation/navigation_highlight_top_open_bmw.png); /* BMW Specific */
+}
+#navigation ul li.active a.active,
+#navigation ul li.active a.active:visited {
+	padding-left: 28px;
+	background: transparent url(../img/navigation/navigation_highlight_bottom.png) no-repeat right bottom;
+}
+
+/*** second level ***/
+#navigation ul li.open ul {
+	margin-top: -8px;
+	padding-top: 8px;
+}
+
+/** compensate margin-left: -11px from #navigation ul li.active **/
+#navigation ul li.open.active ul {
+	margin-left: 11px;
+	margin-top: -14px;
+}
+
+#navigation ul li.open ul li {
+	margin-bottom: 2px;
+}
+
+#history-navigation ul li.open ul li {
+    margin-bottom: 5px;
+}
+
+#navigation ul li.open ul li a {
+	padding-left: 17px;
+}
+
+/** third level **/
+#navigation ul li.open ul li.open ul {
+	margin-bottom: 5px;
+	padding-left: 13px;
+}
+
+#navigation ul li.open ul li.open.active ul {
+	margin-top: -14px;
+}
+
+#navigation ul li.open ul li.open ul li.active {
+	margin-left: -24px;
+}
+
+#navigation ul li.open ul li.open ul li.active a {
+	padding-left: 41px;
+}
+
+#history-navigation ul li.open ul li a {
+	padding-left: 11px;
+}
+
+/***** variations: noheader, nonavigation ******/
+body.nonavigation div#navigation {
+	display: none;
+}
+body.noheader div#navigation {
+	top: 19px;
+}
+
+/* forms.css: Layout für Formulare */
+
+form {
+	line-height: 14px;
+    overflow: visible;
+	margin-bottom: 7px; /* Abstand zu Footer */
+}
+
+input, form input, select, form select, textarea, form textarea, button, form button {
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+textarea {
+	overflow: auto;
+}
+
+/* Comboboxen - temp. Layout */
+select {
+    background: url(../img/form_input_bg_shadow.png) no-repeat;
+	border: 1px solid #999;
+    height: 21px;
+}
+
+select option {
+	padding-top: 1px;
+	padding-bottom: 2px;
+}
+
+/* neues Textbox-Design */
+input.textbox, textarea {
+    background: url(../img/form_input_bg_shadow.png) no-repeat;
+    border: 1px solid #999;
+    padding: 2px 3px;
+}
+ 
+/* neues Button-Design */
+input.button, button {
+    background: url(../img/form_button_128_bmw.png) no-repeat; /* BMW Specific */
+	border: 0;
+    color: #FFF;
+	text-align: left;
+	font-weight: bold;
+	width: 128px;
+    height: 21px;
+    padding: 0 4px 4px 4px;
+	overflow: hidden;
+	margin-right: 4px;
+}
+
+input.smallbutton, button.smallbutton {
+    background: url(../img/form_button_114_bmw.png) no-repeat; /* BMW Specific */
+	width: 114px;
+    padding: 0 4px 3px 4px;
+}
+
+input.button:hover, button:hover,
+input.button:active, button:active {
+	background-position: 0 -21px;
+}
+
+/* Button deaktiviert */
+input.button-disabled, input.button-disabled:hover {
+ background-position: 0 -42px;
+}
+
+input.checkbox, input.radio {
+	margin-right: 11px;
+	vertical-align: middle;
+}
+
+/* Cursor */
+.checkbox, .radio, .select, .button,
+button, select {
+    cursor: pointer;
+}
+
+.disabled, .checked-disabled,
+.button-disabled, .readonly {
+    cursor: default;
+}
+
+/* Fehlermarkierung */
+label.error {
+	color: #C33 !important;
+}
+
+input.error, select.error, textarea.error {
+    border-color: #C33 !important;
+}
+
+/* Input Dimensions - Alte Werte! mit Hack */
+input.col1, textarea.col1 { width: 113px; w\idth: 105px; }
+input.col2, textarea.col2 { width: 233px; w\idth: 225px; }
+input.col3, textarea.col3 { width: 353px; w\idth: 345px; }
+input.col4, textarea.col4 { width: 473px; w\idth: 465px; }
+input.col5, textarea.col5 { width: 593px; w\idth: 585px; }
+input.hcol1, textarea.hcol1 { width:  53px; w\idth:  45px; }
+input.hcol3, textarea.hcol3 { width: 173px; w\idth: 165px; }
+input.hcol5, textarea.hcol5 { width: 293px; w\idth: 285px; }
+input.hcol7, textarea.hcol7 { width: 413px; w\idth: 405px; }
+input.hcol9, textarea.hcol9 { width: 533px; w\idth: 525px; }
+select.col1 { margin-right: 7px; width: 120px; w\idth: 113px; }
+select.col2 { margin-right: 7px; width: 240px; w\idth: 233px; }
+select.col3 { margin-right: 7px; width: 360px; w\idth: 353px; }
+select.col4 { margin-right: 7px; width: 480px; w\idth: 473px; }
+select.col5 { margin-right: 7px; width: 600px; w\idth: 593px; }
+select.col6 { margin-right: 7px; width: 720px; w\idth: 713px; }
+select.hcol1 { margin-right: 7px; width: 60px; w\idth: 53px; }
+select.hcol3 { margin-right: 7px; width: 180px; w\idth: 173px; }
+select.hcol5 { margin-right: 7px; width: 300px; w\idth: 293px; }
+select.hcol7 { margin-right: 7px; width: 420px; w\idth: 413px; }
+select.hcol9 { margin-right: 7px; width: 540px; w\idth: 533px; }
+select.hcol11 { margin-right: 7px; width: 660pxm; w\idth: 653px; }
+
+input.scol1, textarea.scol1 { width: 105px; w\idth:  97px; }
+input.scol2, textarea.scol2 { width: 225px; w\idth: 217px; }
+input.scol3, textarea.scol3 { width: 345px; w\idth: 337px; }
+input.scol4, textarea.scol4 { width: 465px; w\idth: 457px; }
+input.scol5, textarea.scol5 { width: 585px; w\idth: 577px; }
+input.shcol1, textarea.shcol1 { width:  45px; w\idth:  37px; }
+input.shcol3, textarea.shcol3 { width: 165px; w\idth: 157px; }
+input.shcol5, textarea.shcol5 { width: 285px; w\idth: 277px; }
+input.shcol7, textarea.shcol7 { width: 405px; w\idth: 397px; }
+input.shcol9, textarea.shcol9 { width: 525px; w\idth: 517px; }
+select.scol1   { margin-right: 7px; width: 112px; w\idth: 105px; }
+select.scol2   { margin-right: 7px; width: 232px; w\idth: 225px; }
+select.scol3   { margin-right: 7px; width: 352px; w\idth: 345px; }
+select.scol4   { margin-right: 7px; width: 472px; w\idth: 465px; }
+select.scol5   { margin-right: 7px; width: 592px; w\idth: 585px; }
+select.scol6   { margin-right: 7px; width: 712px; w\idth: 705px; }
+select.shcol1  { margin-right: 7px; width:  52px; w\idth:  45px; }
+select.shcol3  { margin-right: 7px; width: 172px; w\idth: 165px; }
+select.shcol5  { margin-right: 7px; width: 292px; w\idth: 285px; }
+select.shcol7  { margin-right: 7px; width: 412px; w\idth: 405px; }
+select.shcol9  { margin-right: 7px; width: 532px; w\idth: 525px; }
+select.shcol11 { margin-right: 7px; width: 652px; w\idth: 645px; }
+
+/* Datepicker
+ * Abstände nicht genau nach Vorlage!
+ */
+.ui-datepicker-trigger {
+	vertical-align: bottom;
+	margin-bottom: 4px;
+	margin-left: -1px;
+	cursor: pointer;
+}
+
+.ui-datepicker-calendar {
+	margin: 7px;
+}
+
+.ui-datepicker.ui-widget-content {
+	margin-top: -1px;
+	border: 1px solid #999;
+	background: #ffffff;
+	padding: 4px 0px 4px 5px;
+}
+
+.ui-datepicker-title {
+	font-weight: bold;
+	text-align: center;
+	height: 16px;
+}
+
+.ui-datepicker a.ui-state-default {
+	display: block;
+	width: 17px;
+	height: 14px;
+	text-decoration: none;
+	padding: 0px 2px;
+}
+
+.ui-datepicker a.ui-state-default:hover {
+	background: url(../img/form_calendar_select_bmw.png) 0px 1px no-repeat; /* BMW Specific */
+	color: #039 !important; /* BMW Specific */
+	font-weight: bold;
+}
+
+.ui-datepicker th {
+	font-weight: bold;
+}
+
+.ui-datepicker th, .ui-datepicker td {
+	width: 24px;
+	text-align: left;
+}
+
+.ui-datepicker th span {
+	padding: 0px 2px;
+}
+
+.ui-datepicker-week-end, .ui-datepicker-week-end a {
+	color: #666 !important;
+}
+
+.ui-datepicker-week-col {
+	color: #999 !important;
+}
+
+.ui-helper-hidden {
+	display: none;
+}
+
+.ui-helper-hidden-accessible {
+	position: absolute;
+	left: -99999999px;
+}
+
+/* Position der Datepicker Forward- und Backward-Icons */
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+	width: 16px;
+	height: 16px;
+	display: block;
+	position: absolute;
+	top: 3px;
+	cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	left: 32px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+	right: 32px;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+	margin: 5px 6px;
+	display: block;
+	width: 4px;
+	height: 7px;
+	text-indent: -99999px;
+	overflow: hidden;
+}
+
+/* Datepicker Forward- und Backward-Icon-Grafiken */
+.ui-datepicker .ui-datepicker-prev .ui-icon {
+	background: url(../img/pagination_bmw.png) no-repeat 0 0; /* BMW Specific */
+}
+
+.ui-datepicker .ui-datepicker-next .ui-icon {
+	background: url(../img/pagination_bmw.png) no-repeat -18px 0; /* BMW Specific */
+}
+
+.ui-datepicker-prev:hover .ui-icon {
+	background: url(../img/pagination_bmw.png) no-repeat 0 -7px; /* BMW Specific */
+}
+
+.ui-datepicker-next:hover .ui-icon {
+	background: url(../img/pagination_bmw.png) no-repeat -18px -7px; /* BMW Specific */
+}

@@ -1,0 +1,239 @@
+/* BMW screen_ie7.css
+ * Version: 2.2
+ * Date: 29.04.2011
+ */
+
+/* Allgemeine Eigenschaften Listen */
+#content ul,ol {
+    padding-left: 23px;
+}
+
+/* Content */
+div #content {
+	margin-bottom: 0px; /* Temp. Fix für Footer - muss generell verbessert werden */
+}
+
+/* News-Container */
+#content div.news div.image {
+	margin-top: 2px;
+}
+
+/* Pagination */
+a.pagination-first, a.pagination-previous,
+a.pagination-next, a.pagination-last {
+	margin-top: 24px;
+	margin-bottom: -1px;
+}
+
+/* Tabellen */
+table {
+	margin-bottom: 5px; /* Temp. Fix für Footer - Nebenwirkungen siehe Abst. zw. Tabellen und Abst. Tabellen -> Pagination */
+}
+
+/* Container */
+#content .container .container-content {
+    padding-top: 1px;
+	padding-bottom: 6px;
+}
+
+#content .container h3 {
+	padding-top: 4px;
+	padding-bottom: 2px;
+	position: relative; /* Für RSS-Icon absolute Position */
+}
+
+/* Fix zur Positionierung des RSS-Icons */
+#content .container h3 img{
+	position: absolute;
+	top: 5px;
+}
+
+/* Eigenschaften für Tab-Container */
+#content div.tabcontainer div.tabcontent {
+    padding: 7px 7px 6px 7px;
+}
+
+/* Footer */
+/* Temp. Fix für Footer - muss generell verbessert werden! */
+#footer {
+	margin-top: 1px;
+}
+
+
+/* Formulare */
+/* neues Button-Design */
+input.button, button, input.smallbutton, button.smallbutton {
+    padding: 1px 7px 3px 7px;
+}
+
+input.checkbox, input.radio {
+	vertical-align: text-bottom;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: -4px;
+	margin-right: 8px;
+}
+
+/* Datepicker */
+.ui-datepicker {
+	width: 213px;
+}
+
+.ui-datepicker-title {
+	margin: auto;
+}
+
+.ui-datepicker a.ui-state-default:hover {
+	background-position: 0px 0px;
+}
+
+/* Header */
+#header-title {
+	top: 27px;
+}
+
+#metanavigation {
+	top: 3px; left: -8px;
+}
+
+/* Fix für die Position des dynamisch eingefügten Meta-Menüs */
+#metanavigation li {
+	padding-top: 1px;
+	padding-right: 14px;
+	vertical-align: text-bottom;
+	padding-bottom: 3px;
+}
+
+#metanavigation li a {
+    padding-left: 8px;
+    margin-right: -1px;
+}
+
+#metanavigation li img {
+	padding-left: 1px;
+}
+
+#metanavigation li ul{
+	margin-top: 3px;
+}
+
+#metanavigation li ul li {
+	margin-top: -1px;
+	padding-bottom: 0px;
+}
+
+#metanavigation li.haschildren {
+	margin-right: 13px; /* Fix zur Positionierung des Elements rechts neben einem Dropdown */
+}
+
+#metanavigation li.haschildren ul {
+	margin-left: 8px;
+	padding-right: 6px;
+}
+
+#metanavigation li.haschildren ul a{
+	padding-right: 1px;
+}
+
+#metanavigation li.haschildren ul img {
+	padding-left: 0px;
+}
+
+#top-navigation li ul {
+    padding-top: 13px;
+	padding-bottom: 7px;
+}
+
+#top-navigation a.dropdown {
+	background-position: 113px 2px;
+}
+
+#top-navigation li ul li ul a.dropdown {
+	background-position: 106px 2px;
+}
+
+#top-navigation li.first a.dropdown {
+	background-position: 134px 2px;
+}
+
+#top-navigation li.first ul li ul li a.dropdown {
+	background-position: 107px 2px;
+}
+
+#top-navigation a.highlighted { 
+	background-position: 112px 4px;
+}
+
+#top-navigation li ul li ul a.highlighted {
+	background-position: 105px 4px;
+}
+
+#top-navigation li.first a.highlighted { 
+	background-position: 132px 4px;
+}
+
+#top-navigation li.first ul li ul li a.highlighted { 
+	background-position: 105px 4px;
+}
+
+/* Navigation */
+div#history-navigation > ul, div#tree-navigation > ul {
+	padding-bottom: 1px;
+}
+
+#navigation ul li {
+	vertical-align: middle;
+}
+
+#tree-navigation ul li.active a.active{
+	margin-left: 3px;
+	/*margin-left: 5px;*/
+}
+#tree-navigation ul li.active {
+	padding-left: 1px;
+}
+
+#history-navigation ul li.open ul li a {
+	padding-left: 10px;
+}
+
+#history-navigation li.active {
+	margin-top: -11px !important;
+}
+
+#history-navigation ul li a.open.active {
+    margin-bottom: 0px;
+}
+
+#history-navigation ul#sublinks ul {
+	margin-top: -14px;
+}
+
+#history-navigation ul#sublinks ul  li{
+	margin-top: 5px;
+}
+
+/* Search */
+#global-search-input {
+	padding-top: 3px !important;
+	padding-left: 4px !important;
+	margin-right: -1px !important;
+	margin-bottom: 2px !important;
+}
+
+#search-results-wrapper {
+    overflow: visible;
+}
+
+.search-result-item div.item-content {
+    padding: 5px 0 4px;
+}
+
+#search-results p.more {
+	margin-top: 4px;
+}
+
+#search-results h2 {
+    margin-top: -3px !important;
+	padding-bottom: 1px !important;
+}

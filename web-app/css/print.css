@@ -1,0 +1,516 @@
+ 
+/* screen_basics.css: Allgemeine Eigenschaften */
+
+/* ========== Allgemeine Eigenschaften */
+
+* {
+	font-size: 100%;
+	font-weight: normal;
+	color: #000;
+}
+
+.nocss, hr {
+	display: none;
+}
+
+#content hr {
+	display: block;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, ul, li, img {
+	margin: 0; padding: 0;
+	border: 0; /* for img, mostly */
+	list-style: none; /* for ul */
+}
+
+body {
+	height: 100%;
+	background-color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+       font-size: 75%;
+}
+
+a {
+	color: #000;
+	text-decoration: underline;
+}
+
+strong { font-weight: bold; }
+
+p.image {
+	float: left;
+	margin: 0 0.583em 0.583em 0;
+}
+
+/* IE position: fixed workaround iframe mask */
+iframe.mask {
+	display:none;
+}
+
+.small {
+	font-size: 0.833em;
+}
+
+
+/*	screen_content.css: Eigenschaften fuer den Inhaltsbereich */
+
+/* ========== Ueberschriften */
+
+#headlines {
+	clear: both;
+	padding: 7px 0;
+       margin-top: 0;
+	margin-left: 10px;
+}
+#headlines h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+#headlines h2#subheadline {
+	color: #999;
+}
+
+
+/* ========== Position / Dimension Inhaltsbereich */
+
+#content {
+    clear: both;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+
+#userinfo {
+    display: none;
+}
+
+#iframecontent {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+/* ========== Fusszeile */
+
+#footer {
+	clear: both;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-left: 10px;
+}
+#footer p a, #footer p a:visited, #footer p {
+    font-size: 0.9em;
+    color: #999;
+}
+#footer span {
+	margin-left: 0.5em;
+	padding-left: 0.5em;
+	border-left: 0.083em solid #000;
+}
+#footer span br {
+	display: none;
+}
+#footer-sub-links {
+    display: none;
+}
+
+
+/* ========== Textformatierung */
+
+#content h3 {
+	font-size: 1em;
+	font-weight: bold;
+}
+#content h4 {
+	font-size: 1em;
+
+}
+#content p,
+#content h3,
+#content h4,
+#content li {
+	margin-bottom: 0.75em;
+}
+
+/** BEGIN NEWS **/
+#content li.newsitem {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: auto;
+    overflow: auto;
+    list-style-type: none;
+    margin-left: 0;
+
+}
+
+#content div.newswrapper {float: left; width: 100%;}
+#content div.col2 li.hasimage div.newswrapper {width: 112px;}
+#content div.col4 li.hasimage div.newswrapper {width: 380px;}
+
+#content div.newsmeta {
+    font-size: 11px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+#content span.newsdate {
+    color: #999;
+}
+
+#content h2.newstitle {
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 3px;
+}
+
+#content div.newssummary {
+    margin-left: 1px;
+    text-align: justify;
+}
+
+#content div.newsimage {
+    width: 135px;
+    text-align: right;
+    float: right;
+}
+
+#content div.newsimage img {
+    width: 128px;
+    height: 72px;
+}
+/** END NEWS **/
+
+/* ========== Tabellen neu */
+
+
+
+table {
+	border: 0; border-collapse: collapse;
+}
+td, th {
+	margin: 0; padding: 0; vertical-align: top;
+}
+td.col1, th.col1 { width:  9.416em; }
+td.col2, th.col2 { width: 19.416em; }
+td.col3, th.col3 { width: 29.416em; }
+td.col4, th.col4 { width: 39.416em; }
+td.col5, th.col5 { width: 49.416em; }
+td.col6, th.col6 { width: 59.416em; }
+td.col7, th.col7 { width: 69.416em; }
+td.hcol1, th.hcol1   { width:  4.416em; }
+td.hcol3, th.hcol3   { width: 14.416em; }
+td.hcol5, th.hcol5   { width: 24.416em; }
+td.hcol7, th.hcol7   { width: 34.416em; }
+td.hcol9, th.hcol9   { width: 44.416em; }
+td.hcol11, th.hcol11 { width: 54.416em; }
+td.hcol13, th.hcol13 { width: 64.416em; }
+
+table.data { width: 100%; }
+table.data td, table.data th { padding: 0.166em 0.333em 0.166em 0.25em; }
+table.data th { background-color: #CCC; text-align: left; font-weight: bold; }
+table.data tr.even td { background-color: #EEE; }
+table.data tr.mark td { background-color: #FFC; }
+table.data tr.error td, table.data td.error { background-color: #FCC; }
+
+th.right, td.right { text-align: right; }
+th.center, td.center { text-align: center; }
+th.left, td.left { text-align: left; }
+
+td input, td textarea, td select {
+	margin: 0;
+	vertical-align: middle;
+}
+
+
+/* ========== Spaltenlayout */
+
+div.space { height: 2em; width: 100%; clear: both; }
+div.break { height: 0; font-size: 0; line-height:0; width: 100%; clear: both; }
+
+div.col1-box, div.col2-box, div.col3-box, div.col4-box, div.col5-box, div.col6-box, div.col7-box,
+div.hcol1-box, div.hcol3-box, div.hcol5-box, div.hcol7-box, div.hcol9-box, div.hcol11-box, div.hcol13-box,
+div.col1, div.col2, div.col3, div.col4, div.col5, div.col6, div.col7,
+div.hcol1, div.hcol3, div.hcol5, div.hcol7, div.hcol9, div.hcol11, div.hcol13,
+div.xcol1-box, div.xcol2-box, div.xcol3-box, div.xcol4-box, div.xcol5-box, div.xcol6-box, div.xcol7-box,
+div.xhcol1-box, div.xhcol3-box, div.xhcol5-box, div.xhcol7-box, div.xhcol9-box, div.xhcol11-box, div.xhcol13-box,
+div.xcol1, div.xcol2, div.xcol3, div.xcol4, div.xcol5, div.xcol6, div.xcol7,
+div.xhcol1, div.xhcol3, div.xhcol5, div.xhcol7, div.xhcol9, div.xhcol11, div.xhcol13,
+div.scol1-box, div.scol2-box, div.scol3-box, div.scol4-box, div.scol5-box, div.scol6-box, div.scol7-box,
+div.shcol1-box, div.shcol3-box, div.shcol5-box, div.shcol7-box, div.shcol9-box, div.shcol11-box, div.shcol13-box,
+div.scol1, div.scol2, div.scol3, div.scol4, div.scol5, div.scol6, div.scol7,
+div.shcol1, div.shcol3, div.shcol5, div.shcol7, div.shcol9, div.shcol11, div.shcol13
+{
+	float: left; display: inline; overflow: hidden;
+}
+div.col1, div.col2, div.col3, div.col4, div.col5, div.col6, div.col7,
+div.hcol1, div.hcol3, div.hcol5, div.hcol7, div.hcol9, div.hcol11, div.hcol13,
+div.xcol1, div.xcol2, div.xcol3, div.xcol4, div.xcol5, div.xcol6, div.xcol7,
+div.xhcol1, div.xhcol3, div.xhcol5, div.xhcol7, div.xhcol9, div.xhcol11, div.xhcol13,
+div.scol1, div.scol2, div.scol3, div.scol4, div.scol5, div.scol6, div.scol7,
+div.shcol1, div.shcol3, div.shcol5, div.shcol7, div.shcol9, div.shcol11, div.shcol13
+{
+	margin: 0 7px 7px 0;
+}
+div.colmax { margin: 0 0.583em 0.583em 0; }
+/* screen_navigation.css: Eigenschaften fuer die Navigationsleiste */
+
+/* ========== Basics */
+
+#navigation {
+	display: none;
+}/* screen_header.css: Eigenschaften fuer den Kopfbereich */
+
+
+/* ========== Positionen / Dimensionen */
+
+#header, #navigation-wrapper {
+    display: none;
+}
+
+
+
+/* ========== Formatierung */
+
+#header-logo img {
+	float: right;
+}
+#header-logo {
+}
+#header h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+#header-title {
+}
+#header-subtitle {
+}
+#header p { display: none; }
+
+/* screen_portalheader.css: Eigenschaften fuer die Portalheader-Menueleisten */
+
+/* ========== Positionen / Dimensionen */
+
+#portalheader {
+	display: none;
+}/* screen_forms.css: Eigenschaften für Formulare */
+
+/* ========== Formulare */
+
+form {
+	overflow: visible;
+	margin: 0;
+}
+
+input, textarea, select {
+	font-size: 100%;
+	font-family: Arial,sans-serif;
+	vertical-align: middle;
+}
+
+form div.row {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 0.583em;
+}
+form hr {
+	border: 0;
+	border-bottom: 1px solid #666;
+	margin: 10px 0;
+	width: 100%; clear: both;
+}
+label {
+	padding: 0.25em 0;
+}
+label.fullsize {
+	display: block;
+	width: 100%;
+	text-align: right;
+}
+input, textarea, select {
+	padding: 0.083em 0.166em;
+	margin-bottom: 0.583em;
+	vertical-align: middle;
+}
+form fieldset {
+  clear: both;
+  border-color: #000000;
+  border-width: 1px 0px 0px 0px;
+  border-style: solid none none none;
+  padding: 10px;
+  margin: 0px 0px 0px 0px;
+}
+input.col1, textarea.col1 { width:  9.416em; w\idth:  8.75em; }
+input.col2, textarea.col2 { width: 19.416em; w\idth: 18.75em; }
+input.col3, textarea.col3 { width: 29.416em; w\idth: 28.75em; }
+input.col4, textarea.col4 { width: 39.416em; w\idth: 38.75em; }
+input.col5, textarea.col5 { width: 49.416em; w\idth: 48.75em; }
+input.hcol1, textarea.hcol1 { width:  4.416em; w\idth:  3.75em; }
+input.hcol3, textarea.hcol3 { width: 14.416em; w\idth: 13.75em; }
+input.hcol5, textarea.hcol5 { width: 24.416em; w\idth: 23.75em; }
+input.hcol7, textarea.hcol7 { width: 34.416em; w\idth: 33.75em; }
+input.hcol9, textarea.hcol9 { width: 44.416em; w\idth: 43.75em; }
+select.col1 { margin-right: 0.583em; width: 10em; w\idth: 9.416em; }
+select.col2 { margin-right: 0.583em; width: 20em; w\idth: 19.416em; }
+select.col3 { margin-right: 0.583em; width: 30em; w\idth: 29.416em; }
+select.col4 { margin-right: 0.583em; width: 40em; w\idth: 39.416em; }
+select.col5 { margin-right: 0.583em; width: 50em; w\idth: 49.416em; }
+select.col6 { margin-right: 0.583em; width: 60em; w\idth: 59.416em; }
+select.hcol1 { margin-right: 0.583em; width: 5em; w\idth: 4.416em; }
+select.hcol3 { margin-right: 0.583em; width: 15em; w\idth: 14.416em; }
+select.hcol5 { margin-right: 0.583em; width: 25em; w\idth: 24.416em; }
+select.hcol7 { margin-right: 0.583em; width: 35em; w\idth: 34.416em; }
+select.hcol9 { margin-right: 0.583em; width: 45em; w\idth: 44.416em; }
+select.hcol11 { margin-right: 0.583em; width: 55em; w\idth: 54.416em; }
+
+input.scol1, textarea.scol1 { width:  8.75em; w\idth:  8.083em; }
+input.scol2, textarea.scol2 { width: 18.75em; w\idth: 18.083em; }
+input.scol3, textarea.scol3 { width: 28.75em; w\idth: 28.083em; }
+input.scol4, textarea.scol4 { width: 38.75em; w\idth: 38.083em; }
+input.scol5, textarea.scol5 { width: 48.75em; w\idth: 48.083em; }
+input.shcol1, textarea.shcol1 { width:  3.75em; w\idth:  3.083em; }
+input.shcol3, textarea.shcol3 { width: 13.75em; w\idth: 13.083em; }
+input.shcol5, textarea.shcol5 { width: 23.75em; w\idth: 23.083em; }
+input.shcol7, textarea.shcol7 { width: 33.75em; w\idth: 33.083em; }
+input.shcol9, textarea.shcol9 { width: 43.75em; w\idth: 43.083em; }
+select.scol1   { margin-right: 0.583em; width:  9.333em; w\idth:  8.75em; }
+select.scol2   { margin-right: 0.583em; width: 19.333em; w\idth: 18.75em; }
+select.scol3   { margin-right: 0.583em; width: 29.333em; w\idth: 28.75em; }
+select.scol4   { margin-right: 0.583em; width: 39.333em; w\idth: 38.75em; }
+select.scol5   { margin-right: 0.583em; width: 49.333em; w\idth: 48.75em; }
+select.scol6   { margin-right: 0.583em; width: 59.333em; w\idth: 58.75em; }
+select.shcol1  { margin-right: 0.583em; width:  4.333em; w\idth:  3.75em; }
+select.shcol3  { margin-right: 0.583em; width: 14.333em; w\idth: 13.75em; }
+select.shcol5  { margin-right: 0.583em; width: 24.333em; w\idth: 23.75em; }
+select.shcol7  { margin-right: 0.583em; width: 34.333em; w\idth: 33.75em; }
+select.shcol9  { margin-right: 0.583em; width: 44.333em; w\idth: 43.75em; }
+select.shcol11 { margin-right: 0.583em; width: 54.333em; w\idth: 53.75em; }/* screen_container.css: Eigenschaften fuer Container */
+
+#content .container {
+    border: 1px solid #999;
+    margin-bottom: 7px;
+}
+#content .container h3 {
+    font-size: 1em;
+    color: #000;
+    padding: 3px 0;
+    margin: 0 6px;
+    border-bottom: 1px solid #999;
+}
+#content .container h3.minimized {
+    border: none;
+}
+#content .container .container-content {
+    padding: 7px;
+}
+#content .container .container-box {
+    padding: 7px 0;
+    overflow: hidden;
+}
+#content .container h3 a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Icons */
+
+#content ul.container-icons {
+    display: none;
+}/* screen_teaser.css: Eigenschaften fuer Teaser */
+
+/* Vorläufige Umsetzung */
+
+#content .teaser {
+	border-top: 0.083em solid #999;
+}
+#content .teaser h3 {
+	font-size: 1em;
+	padding: 0.166em 0;
+	margin: 0;
+	border-bottom: 0.083em solid #999;
+}
+#content .teaser-content {
+	border-bottom: 0.083em solid #999;
+	margin: 0.583em 0;
+	overflow: hidden;
+}
+/* screen_tree.css: Eigenschaften fuer Baumstrukturen (Sitemap/Tree-Darstellungen) */
+
+/* ========== Allgemeine Definitionen (<ul class="tree">) */
+
+#content ul.tree {
+	list-style-type: none;
+}
+#content ul.tree li {
+	list-style-type: none;
+	position: static;
+	padding: 0.25em 0 0 0;
+	margin: 0;
+	clear: both;
+}
+#content ul.tree li li {
+	padding-left: 3.333em;
+	background: transparent url(../img/tree_line.gif) no-repeat 0 -4000px;
+}
+#content ul.tree li li.last-li {
+	background: transparent url(../img/tree_line.gif) no-repeat 0 -7980px;
+}
+#content ul.tree li div {
+	padding: 0.083em 0.166em 0.083em 18px;
+	background: #FFF url(../img/tree_icon-folder.gif) no-repeat 1px 0;
+	font-size: 0.91em;
+}
+
+/* ========== Dynamische Variante mit JavaScript (<ul class="tree dynamic">) */
+
+#content ul.dynamic-tree div.dynamic-tree-togglenode {
+	display: block;
+	position: relative; top: 0.25em; left: -3.333em; float: left;
+	width: 10px; height: 10px;
+	background: transparent url(../img/tree_toggle-closed.gif) no-repeat;
+	padding: 0;
+}
+#content ul.dynamic-tree div.dynamic-tree-togglenode-open {
+	background: transparent url(../img/tree_toggle-open.gif) no-repeat;
+}
+/* Nachfolgend ein Workaround für die von IE<7 nicht verstandenen Child-Selektoren (12 Ebenen) */
+/* Die zweite LI-Ebene ist per definitionem immer offen */
+#content ul.dynamic-tree ul li ul,
+#content ul.dynamic-tree ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul ul ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul ul ul ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul ul ul ul ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul ul ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul ul ul ul li.node-open ul ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul ul ul ul ul li.node-open ul ul { display: none; }
+#content ul.dynamic-tree ul li.node-open ul,
+#content ul.dynamic-tree ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul ul ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul ul ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul ul ul ul ul li.node-open ul,
+#content ul.dynamic-tree ul ul ul ul ul ul ul ul ul ul ul ul li.node-open ul { display: block; }
+
+
+/* ========== Sitemap-Variante (<ul class="tree sitemap">) */
+
+#content ul.sitemap li li {
+	padding-left: 5em;
+}
+#content ul.sitemap li div {
+	background: #CCC;
+	padding: 0.083em 0.166em;
+	width: 15em;
+	border: 1px solid #999;
+}

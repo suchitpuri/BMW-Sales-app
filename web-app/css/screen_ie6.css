@@ -1,0 +1,232 @@
+/* Header */
+#header-logo {
+    position: absolute !important;
+	background: transparent url(../img/bmw_group_logo_bmw_de.gif) no-repeat; /* BMW Specific */
+}
+#header {
+    position: relative !important;
+    width: 100% !important;
+}
+#header-title {
+	position: relative !important;
+	top: 27px !important;
+}
+
+#metanavigation {
+	top: 7px;
+}
+
+#portalheader {
+    position: absolute !important;
+}
+
+#portalheader li ul {
+    background: transparent #FFF;
+	border: 1px solid #CCC;
+}
+
+#navigation-wrapper {
+    position: absolute !important;
+}
+
+#top-navigation li {
+	width: 137px;
+}
+
+#top-navigation li.first{
+	width: 173px;
+}
+
+#top-navigation li a.top, #top-navigation li.first a.top  {
+	font-size: 14px;
+	color: #666;
+	line-height: 25px;
+	margin: 0px 25px;
+	padding-bottom: 8px;
+	white-space: nowrap;
+}
+
+#top-navigation li.active a.top, #top-navigation li a.top:hover,
+#top-navigation li a.top span.toplevelimagehover {
+	text-decoration: underline;
+	color: #039; /* BMW Specific */
+}
+
+#top-navigation li ul {
+	top: 2px;
+	background: transparent #FFF !important;
+	border: 1px solid #CCC;
+	border-top: 0px;
+}
+
+#top-navigation div.sub {
+    background: transparent #FFF;
+    border: 1px solid #CCC;
+}
+
+#top-navigation li ul li.subfirst{
+	border-top: 0px;
+}
+
+#top-navigation li ul li ul{
+	border-top: 1px solid #CCC !important;
+}
+
+#top-navigation li.first ul li{
+	width: 163px;
+}
+
+#top-navigation li ul li ul li a, #top-navigation li ul li ul li ul li a {
+	width: 91px !important;
+	padding-right: 30px;
+}
+
+#top-navigation li ul li ul li, #top-navigation li ul li ul li ul li {
+	width: 91px !important;
+}
+
+#top-navigation div.sub div, #top-navigation div.sub div dd {
+	padding-left: 1px;
+}
+
+#border-helper {
+    position: absolute !important;
+    top: -200px !important;
+}
+
+#search-results-wrapper {
+    background: none !important;
+}
+
+/* Search */
+#global-search-input {
+	padding-top: 3px;
+}
+
+#search-results-wrapper {
+	margin-top: -4px;
+    background: transparent #FFF !important;
+	border: 1px solid #CCC;
+	margin-left: 0px;
+}
+
+#search-results-arrow {
+	background: transparent url(../img/searchArrow.gif) no-repeat top left;
+}
+
+/* Content */
+#iframecontent {
+    margin-top: 0px !important;
+}
+
+#contentarea {
+    position: absolute !important;
+    left: 0px;
+    top: 0;
+}
+
+#loader {
+    position: absolute !important;
+}
+
+/* Container */
+/* Fix zur Positionierung des RSS-Icons */
+#content .container h3 img{
+	position: absolute;
+	top: 5px;
+}
+
+#content ul.container-icons li a {
+	margin: 2px 0px 2px 0;
+}
+
+/* Pagination-Fix */
+#content .container {
+	height: auto !important;
+	height: 1px;
+}
+
+/* minimierte Container */
+#content .container-content.minimized{
+	display: block;
+}
+
+#content .container-content.minimized div{
+	display: none;
+}
+
+#content .container.minimized .integrated-window {
+    display: block;
+}
+
+/* Tabcontainer */
+#content div.tabcontainer ul.tabs li.last {
+	margin-right: -6px;
+}
+
+#content div.tabcontainer ul li a {
+	float: left;
+	z-index: 9999;
+}
+#content div.tabcontainer div.tabcontent {
+z-index: 1111;
+}
+
+#content div.tabcontainer div.tabcontent{
+	position: relative !important;
+}
+
+#content div.tabcontainer ul.tabs li.large_398px a {
+	width: 375px;
+}
+#content div.tabcontainer ul.tabs li.large_128px a {
+	width: 105px;
+}
+#content div.tabcontainer ul.tabs li.small_83px a {
+	width: 60px;
+}
+#content div.tabcontainer ul.tabs li.small_38px a {
+	width: 15px;
+}
+
+/* Formulare */
+/* Datepicker */
+.ui-datepicker {
+	width: 213px;
+}
+
+.ui-datepicker-cover {
+    display: none;
+}
+
+/* Navigation */
+
+#navigation ul li, #navigation ul li.active a.active {
+	background: none !important;
+}
+
+#navigation ul li.haschildren a.haschildren {
+	background: transparent url(../img/arrow_grey.gif) no-repeat 1px 4px;
+}
+#navigation ul li a.haschildren:hover {
+	background-position: 1px 4px; /* BMW Specific */
+}
+
+#navigation ul li.haschildren a.open, #navigation ul li.haschildren a.open:hover {
+	padding-left: 18px;
+	background: transparent url(../img/arrow_blue_down_bmw.gif) no-repeat 0px 5px; /* BMW Specific */
+}
+
+#navigation ul li.openactive a.openactive {
+	padding-left: 18px !important;
+	margin-left: 18px;
+	background: transparent url(../img/arrow_blue_down_bmw.gif) no-repeat 0px 5px !important; /* BMW Specific */
+}
+
+#navigation ul li.active a.active {
+	text-decoration: underline;
+}
+
+#navigation ul li ul li ul li.active a.active {
+	margin-left: 20px;
+}
