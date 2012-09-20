@@ -159,4 +159,10 @@ class PersonController {
 
 		return [person: person, roleMap: roleMap]
 	}
+  
+  def dealers = {      
+      List dealerList =  Person.executeQuery("select distinct dealer from Person")
+      dealerList.remove("BMW")
+      [dealers: dealerList]
+  }
 }

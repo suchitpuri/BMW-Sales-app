@@ -18,7 +18,7 @@ environments {
 			pooled = true			
 			driverClassName = "com.mysql.jdbc.Driver"
 			username = "root"
-			password = "bmw"
+			password = "password"
 			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
 			url = "jdbc:mysql://localhost:3306/test"
 					}
